@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+</head>
+<body>
+    <div class="button">
+        <!-- <input onclick="func()" id="1" type="button" value="1" > -->
+        <button id="1" onclick="func()" value="1">1</button>
+        <button id="2" onclick="func()" value="2">2</button>
+        <button onclick="func()">2</button>
+        <button onclick="func()">3</button>
+        <button onclick="func()">4</button>
+        <button onclick="func()">5</button>
+        <button onclick="func()">6</button>
+        <button onclick="func()">7</button>
+        <button onclick="func()">8</button>
+        <button onclick="func()">9</button>
+        <button onclick="func()">0</button>
+        <button onclick="func()">+</button>
+        <button onclick="func()">-</button>
+        <button onclick="func()">*</button>
+        <button onclick="func()">/</button>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        
+            function func() {
+                const no = document.getElementById("1").value
+                const no1 = document.getElementById("2").value
+                document.getElementById("res").innerText = no
+                document.getElementById("res").innerText = no
+                console.log(no)
+            }
+    </script>
+    
+</body>
+</html>
