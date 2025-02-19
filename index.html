@@ -6,38 +6,55 @@
     <title>Online Calculator</title>
     <link rel="stylesheet" href="">
     <script src=""></script>
+    
 </head>
+
 <body>
-    <div class="button">
-        <!-- <input onclick="func()" id="1" type="button" value="1" > -->
-        <button id="1" onclick="func()" value="1">1</button>
-        <button id="2" onclick="func()" value="2">2</button>
-        <button onclick="func()">2</button>
-        <button onclick="func()">3</button>
-        <button onclick="func()">4</button>
-        <button onclick="func()">5</button>
-        <button onclick="func()">6</button>
-        <button onclick="func()">7</button>
-        <button onclick="func()">8</button>
-        <button onclick="func()">9</button>
-        <button onclick="func()">0</button>
-        <button onclick="func()">+</button>
-        <button onclick="func()">-</button>
-        <button onclick="func()">*</button>
-        <button onclick="func()">/</button>
-        <p id="res"></p>
-    </div>
+    <p id="Answer" ></p>
+    <input id="input1" type="text" placeholder="Enter 1st numnber">
+    <input id="operator" type="text" placeholder="Enter operation to be done">
+    <input id="input2" type="text" placeholder="Enter 2st numnber">
+    <button onclick="calculate()">Calculate</button>
+
+    
+
+    <style>
+        p{
+            background-color: aqua;
+            padding: 10px;
+            width: 150px;
+            height: 35px;
+            
+        }
+    </style>
+
+    
+    
+
+
 
     <script>
+        function calculate() {
+            
+            var  input1 = parseFloat(document.getElementById("input1").value)
+            const input2 = document.getElementById("operator").value
+            var input3 = parseFloat(document.getElementById("input2").value)
+            document.getElementById("Answer").innerHTML = input1+input3
 
-        
-            function func() {
-                const no = document.getElementById("1").value
-                const no1 = document.getElementById("2").value
-                document.getElementById("res").innerText = no
-                document.getElementById("res").innerText = no
-                console.log(no)
+            if(input2 == "+") {
+                document.getElementById("Answer").innerHTML = input1+input3
+            } else if(input2 == "-") {
+                document.getElementById("Answer").innerHTML = input1-input3
+            } else if(input2 == "/") {
+                document.getElementById("Answer").innerHTML = input1/input3            
+            } else if(input2 == "*") {
+                document.getElementById("Answer").innerHTML = input1*input3
+            } else if(input2 == "0.5") {
+                document.getElementById("Answer").innerHTML = Math.sqrt(input1)
+            } else {
+                document.getElementById("Answer").innerHTML = alert("Invalit operator")
             }
+        }    
     </script>
     
 </body>
